@@ -6,10 +6,16 @@
 		<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
 		<script type="text/javascript">
 			$(function(){
-				$("tr:first").css({"background":"blue","color":"white"});
+				//特定位置选择器				
+                                $("tr:first").css({"background":"blue","color":"white"});
 				$("tr:eq(1)").css("background","azure");
 				$("tr:last").css("background","bisque");
-			})
+				//指定范围选择器			
+                                $("tr:gt(0)").css("fontStyle","italic");
+				$("tr:lt(1)").css("fontWeight","block");
+				$("tr:even").css("textAlign","center");
+				$("tr:odd").css("textAlign","right")
+})
 		</script>
 	</head>
 	<body>
