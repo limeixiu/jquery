@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
+		<style>
+			.red{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<p>11</p>
+			<p>222</p>
+			<button value="change">更改样式</button>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$("div#wrap>button:first").click(
+					function(){
+						$("p").toggleClass("red");//toggleClass设置或移除样式
+					}
+				);
+			})
+		</script>
+	</body>
+</html>

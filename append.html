@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
+		<style type="text/css">
+			
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div id="wrap">
+			<button>增加li</button>
+			<ul></ul>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$("div#wrap>button").click(function(){
+					$("ul").append($("<li>new item</li>"));//等同于$("ul").append("<li>new item</li>");
+				});
+			});
+		</script>
+	</body>
+</html>
