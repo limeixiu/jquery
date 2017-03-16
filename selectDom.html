@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery选择器</title>
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("input[type=button]").click(function(){
+					var i=0;;
+					$("input[type=text]").each(function(){//each()遍历
+					   i+=parseInt($(this).val());//val()获取当前函数的值
+				    });
+				    $('label').text(i);
+				});
+				
+				$("input:lt(2)").add("label").css("border","none")//add('label')：把label元素添加到当前选择组合中
+				.css({
+					'borderBottom':'solid 1px navy',
+					'textAlign':'center',
+					'width':'3em',
+					'width':"30px"
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<input type="text" value="" />+
+			<input type="text" value="" />
+			<input type="button" value="=" />
+			<label></label>
+		</div>
+	</body>
+</html>
