@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>伪类</title>
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("tr:first").css({"background":"blue","color":"white"});
+				$("tr:eq(1)").css("background","azure");
+				$("tr:last").css("background","bisque");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<table>
+				<tr>
+					<th>选择器</th>
+					<th>说明</th>
+				</tr>
+				<tr>
+					<td>:first</td>
+					<td>匹配找到第一个元素</td>
+				</tr>
+				<tr>
+					<td>:last</td>
+					<td>匹配找到的最后一个元素</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
