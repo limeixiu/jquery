@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				var li = document.getElementsByTagName("li");//DOM对象
+				var $li =$(li[0]);//jQuery对象
+				alert($li.html())
+			})
+		</script>
+		<title>DOM对象转换为jQuery对象</title>
+	</head>
+	<body>
+		<div id="wrap">
+			<ul>
+				<li>列表一</li>
+				<li>列表二</li>
+				<li>列表三</li>
+			</ul>
+		</div>
+	</body>
+</html>
