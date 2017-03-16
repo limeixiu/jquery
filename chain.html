@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery链式语法</title>
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				//appendTo
+				$('<input type="button" value="按钮1" /><input type="button" value="按钮2" /><input type="button" value="按钮3" /><input type="button" value="按钮4" />')
+				.appendTo($("div#wrap"));
+				
+				$("input[type='button']").eq("0").click(function(){
+					alert("第一个按钮");
+				}).end().eq("1")//end()返回所以按钮,再匹配第二个按钮
+				.click(function(){
+					$('input[type="button"]:eq(0)').trigger('click');//trigger触发被选元素的指定方法  $('input[type="button"]:eq(0)')=$('input[type="button"]').eq(0)
+				}).end().eq("2")
+				.click(function(){
+					$("input[type='button']:eq(0)").unbind('click');//unbind移除所以或被选元素的事件处理程序
+				}).end().eq("3")
+				.toggle(function(){
+					$("div#wrap").hide();
+				},function(){
+					$("div#wrap").show();
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="wrap">jQuery链式语法</div>
+	</body>
+</html>
